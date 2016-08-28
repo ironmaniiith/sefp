@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery sample</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<pre>
+$.ajax({
+    url: "http://demo.aalekhjain.me/api/getAllStudents",
+    success: function(students){
+      alert(students); // [2014010, 2014011, 2014012, 2014013, 2014014, 2014015, 2014016, 2014017, 2014018, 2014019]
+    }
+});
+</pre>
+<body>
+</body>
+</html>
