@@ -1,0 +1,2 @@
+1. Show the name of the courses along with their maximum marks. (Ex. DS(10), DLP(20), etc ..)
+2. Instead of using getAllMarks, use the method getMarks to construct the table.
