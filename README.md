@@ -21,7 +21,7 @@
 
 #### Sample output
 
-demo.aalekhjain.me/api/getAllStudents (on successfull run) =>
+[demo.aalekhjain.me/api/getAllStudents](demo.aalekhjain.me/api/getAllStudents) (on successfull run) =>
 (Roll Numbers can be expected in sorted order)
 ```javascript
 [2014010,2014011,2014012,2014013,2014014,2014015,2014016,2014017,2014018,2014019]
@@ -37,7 +37,7 @@ demo.aalekhjain.me/api/getAllStudents (on successfull run) =>
 
 #### Sample output
 
-demo.aalekhjain.me/api/getAllSubjects (on successfull run) =>
+[demo.aalekhjain.me/api/getAllSubjects](demo.aalekhjain.me/api/getAllSubjects) (on successfull run) =>
 ```javascript
 [{"id":0,"name":"DS"},{"id":1,"name":"DLP"},{"id":2,"name":"ITWS"},{"id":3,"name":"SE"},{"id":4,"name":"BEC"},{"id":5,"name":"ES"}]
 ```
@@ -52,7 +52,7 @@ demo.aalekhjain.me/api/getAllSubjects (on successfull run) =>
 
 #### Sample output
 
-demo.aalekhjain.me/api/getMaxMarks/0 (on successfull run) =>
+[demo.aalekhjain.me/api/getMaxMarks/0](demo.aalekhjain.me/api/getMaxMarks/0) (on successfull run) =>
 ```javascript
 {"max_marks":10}
 ```
@@ -67,7 +67,7 @@ demo.aalekhjain.me/api/getMaxMarks/0 (on successfull run) =>
 
 #### Sample output
 
-demo.aalekhjain.me/api/getAllMarks/2014013 (on successfull run) =>
+[demo.aalekhjain.me/api/getAllMarks/2014013](demo.aalekhjain.me/api/getAllMarks/2014013) (on successfull run) =>
 ```javascript
 {"obtained_marks":[12,16,21,22,24,23]}
 ```
@@ -83,7 +83,7 @@ demo.aalekhjain.me/api/getAllMarks/2014013 (on successfull run) =>
 
 #### Sample output
 
-demo.aalekhjain.me/api/getMarks/2014013/2 (on successfull run) =>
+[demo.aalekhjain.me/api/getMarks/2014013/2](demo.aalekhjain.me/api/getMarks/2014013/2) (on successfull run) =>
 ```javascript
 {"obtained_mark":21}
 ```
