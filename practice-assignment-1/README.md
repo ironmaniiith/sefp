@@ -1,4 +1,4 @@
-## Practise Assignment - 1
+## Practice Assignment - 1
 
 **Aim**: To develop a game in JavaScript
 
@@ -40,7 +40,7 @@ However, it's not compulsory to restrict to the above idea. You are free to crea
 * In the games which are single player, **DO NOT** make random computer moves. For example, in Tic-Tac-Toe, you can make a strategy for computer so that the computer may never lose.
 * Write neat indented code (you can use online beautifiers/indenters). Variable naming should be done very carefully. Maintain modularity. Functional programming is always encouraged. 
 * **DO NOT** hard code your game logic.
-* You are free to do this practise assignment in team or in individual. However if this is done in team, then we expect some really good team effort from your side.
+* You are free to do this practice assignment in team or in individual. However if this is done in team, then we expect some really good team effort from your side.
 * Personal suggestion (good if you follow): Try to use linux as much as you can.
 
 **PS:** Any further updates will be done on this repository only, so keep yourself updated. It's recommended to watch the repositories for any changes.
