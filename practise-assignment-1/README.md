@@ -12,6 +12,8 @@
 
 2. Double player
 
+(You are free to choose any of the above 2 modes, or maybe both if you want)
+
 **List of games**:
 
 * Tic tac toe
