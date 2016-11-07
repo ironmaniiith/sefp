@@ -4,7 +4,8 @@ var HOST = 'http://localhost:8081';
 ;(function() {
     var chatHistory = [],
         chatBox = document.getElementById('chat_text_area'),
-        chatList = document.getElementById('chat_list'); 
+        chatList = document.getElementById('chat_list'),
+        chatArea = document.getElementById('chat_area');
 
     function detectEnter(event) {
         // Detect if enter key is pressed while writing in the chat box
@@ -38,6 +39,7 @@ var HOST = 'http://localhost:8081';
         for (var i = 0; i < length; i++) {
             appendChat(newChats[i]);
         }
+        chatArea.scrollTop = chatArea.scrollHeight;
     }
 
     function appendChat(chat) {
