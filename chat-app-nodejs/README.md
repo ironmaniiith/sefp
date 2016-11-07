@@ -5,7 +5,7 @@
 4. goto: localhost:8081 and enter your name
 5. You can now chat by opening two different tabs/windows in your browser...
 
-If you want to the chat to run on different system, replace the HOST in the file `chat-app-nodejs/assets/js/main.js` with your local ip address.
+If you want the chat to run on different system, replace the HOST in the file `chat-app-nodejs/assets/js/main.js` with your local ip address.
 
 Enjoy..
 
