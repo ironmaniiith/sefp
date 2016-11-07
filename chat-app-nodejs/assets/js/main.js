@@ -29,10 +29,9 @@ var HOST = 'http://localhost:8081';
     }
 
     function updateChatHistory(messages) {
-        if (messages.length <= chatHistory.length) {
-            return;
-        }
+        if (messages.length === chatHistory.length) return;
         var prevLength = chatHistory.length;
+        if (messages.length < chatHistory.length) prevLength = 0;
         chatHistory = messages;
         var newChats = Array.prototype.slice.call(chatHistory, prevLength);
         var length = newChats.length;
@@ -78,6 +77,9 @@ var HOST = 'http://localhost:8081';
             </li>
         */
     }
+
+    document.getElementById('clear_chat').href = HOST + '/api/deleteAllMessages';
+
     var POLLING_TIME = 500; // 500 ms
     // Continously poll for any new messages
     setInterval(function() {

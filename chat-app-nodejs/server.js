@@ -40,13 +40,23 @@ app.get('/api/insert/', function(req, res, next) {
     });
 });
 
-/** Get all the stops of a bus with the given id */
+/** Get all the messages from the database */
 app.get('/api/getAllMessages/', function(req, res, next) {
     helper.getAllMessages(function(status, output) {
         if (status)
             res.send({ data: output });
         else
             res.send({ _err: err });
+    });
+});
+
+/** Delete all the messages from the data base */
+app.get('/api/deleteAllMessages', function(req, res, next) {
+    helper.deleteAllMessages(function(status, output) {
+        if (status)
+            res.send({ data: output });
+        else
+            res.send({ _err: output });
     });
 });
 

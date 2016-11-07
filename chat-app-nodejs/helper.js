@@ -44,6 +44,7 @@ function insertMessage(message, name, callBack) {
   *    Extracts all the messages from the databases
   *
   *  @param {Function} [callBack] The callback function to which all the messages are passed
+  *                               The first parameter passed to callBack function is `true` if no error occurs, else `false`
   */
 function getAllMessages(callBack) {
     Message.find({}, excludeParams, function(err, messages) {
@@ -69,6 +70,7 @@ function getAllMessages(callBack) {
   *
   *  @param {String} [id] The callback function to which all the messages are passed
   *  @param {Function} [callBack] The callback function to which all the messages are passed
+  *                               The first parameter passed to callBack function is `true` if no error occurs, else `false`
   */
 function getMessageById(id, callBack) {
     Message.findById(id, excludeParams, function(err, message) {
@@ -87,7 +89,32 @@ function getMessageById(id, callBack) {
     });
 }
 
+/** 
+  * deleteAllMessages:
+  *    Deletes all the messages from the databases
+  *
+  *  @param {Function} [callBack] The callback function to which all the messages are passed
+  */
+function deleteAllMessages(callBack) {
+    Message.remove({}, function(err) {
+        var status, output;
+        if (err) {
+            // throw (err);
+            status = false;
+            output = 'Some error occured';
+        }
+        else {
+            // console.log('Extracted messages:', messages);
+            status = true;
+            output = 'All messages successfully deleted';
+        }
+        if (callBack) callBack(status, output);
+    });
+}
+
+
 module.exports = {
+    deleteAllMessages: deleteAllMessages,
     insertMessage: insertMessage,
     getAllMessages: getAllMessages,
     getMessageById: getMessageById

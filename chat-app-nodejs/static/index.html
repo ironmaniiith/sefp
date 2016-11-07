@@ -13,6 +13,9 @@
             max-height: 32em;
             overflow-y: scroll;
         }
+        #clear_chat {
+            cursor: pointer;
+        }
         </style>
     </head>
 
@@ -24,6 +27,7 @@
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             Chat History
+                            <a class="pull-right" id="clear_chat"> Clear Chat Logs</a>
                         </div>
                         <div class="panel-body" id="chat_area">
                             <ul id="chat_list" class="media-list">
