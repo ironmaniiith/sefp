@@ -1,0 +1,10 @@
+Requirements:
+Java (1.8 for Ubuntu)
+Android studio (Latest version preferred, support android 7.0 as well)
+Android sdk (as per the requirements)
+Cordova
+Ionic
+
+
+Extra:
+Get ionic icons from here: http://ionicons.com/
