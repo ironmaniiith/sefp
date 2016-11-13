@@ -80,3 +80,16 @@ function deleteContactByNumber(number) {
 function deleteAllContacts() {
     delete window.localStorage[STORAGE_NAME];
 }
+
+function updateContact(name, number) {
+    // Update the number for contact with given name
+    var contact = getContactsObject();
+    var length = contacts.length;
+    for (var i = 0; i < length; i++) {
+        if (contacts[i][name] === name) {
+            contacts[i].number = number;
+            return true;
+        }
+    }
+    return false;
+}
