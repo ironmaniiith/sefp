@@ -31,7 +31,7 @@ function addContact(name, number, img) {
     contacts.push(contact);
     updateContactsObject(contacts);
     return true;
- }
+}
 
 function updateContactsObject(contacts) {
     var contactString = JSON.stringify(contacts);
