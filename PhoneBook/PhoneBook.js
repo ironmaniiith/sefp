@@ -35,8 +35,28 @@ function addContact(name, number, img) {
  }
  
 
- function deleteAllContacts() {
+function deleteAllContacts() {
     delete window.localStorage[STORAGE_NAME];
- }
+}
 
- 
+function getContactsByName(name) {
+    var contacts = getContactsObject(); // Guaranteed array
+    var length = contacts.length;
+    for (var i = 0; i < length; i++) {
+        if (contacts[i].name === name)
+            return contacts[i];
+    }
+    // Contact not found with given name
+    return null;
+}
+
+function getContactsByNumber(number) {
+    var contacts = getContactsObject(); // Guaranteed array
+    var length = contacts.length;
+    for (var i = 0; i < length; i++) {
+        if (contacts[i].number === number) 
+            return contacts[i];
+    }
+    // Contact not found with given number 
+    return null;
+}
