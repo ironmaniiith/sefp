@@ -83,7 +83,7 @@ function deleteAllContacts() {
 
 function updateContact(name, number) {
     // Update the number for contact with given name
-    var contact = getContactsObject();
+    var contacts = getContactsObject();
     var length = contacts.length;
     for (var i = 0; i < length; i++) {
         if (contacts[i][name] === name) {
