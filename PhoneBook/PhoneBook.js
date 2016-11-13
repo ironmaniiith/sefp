@@ -19,7 +19,7 @@ function addContact(name, number, img) {
     if (img === undefined) {
         img = defaultImage();
     }
-    contacts = getContactsObject(contacts);
+    var contacts = getContactsObject();
     var contact = {
         name: name,
         number: number,
