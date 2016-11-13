@@ -7,6 +7,9 @@ function defaultImage() {
 function getContactsObject() {
     try {
         var contacts = window.localStorage.getItem(STORAGE_NAME);
+        if (contacts === null) {
+            return [];
+        }
         contacts = JSON.parse(contacts);
         return contacts;
     } catch (e) {
