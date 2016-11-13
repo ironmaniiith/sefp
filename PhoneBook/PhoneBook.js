@@ -38,10 +38,6 @@ function updateContactsObject(contacts) {
     window.localStorage.setItem('Contacts', contactString);
 }
 
-function deleteAllContacts() {
-    delete window.localStorage[STORAGE_NAME];
-}
-
 function getContact(tag, value) {
     var contacts = getContactsObject(); // Guaranteed array
     var length = contacts.length;
@@ -79,4 +75,8 @@ function deleteContactByName(name) {
 
 function deleteContactByNumber(number) {
     return deleteContact('number', number);
+}
+
+function deleteAllContacts() {
+    delete window.localStorage[STORAGE_NAME];
 }
