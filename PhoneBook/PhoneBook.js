@@ -34,3 +34,9 @@ function addContact(name, number, img) {
     return true;
  }
  
+
+ function deleteAllContacts() {
+    delete window.localStorage[STORAGE_NAME];
+ }
+
+ 
