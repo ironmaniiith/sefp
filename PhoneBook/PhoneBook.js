@@ -59,7 +59,7 @@ function getContactByNumber(number) {
 
 function deleteContact(tag, value) {
     var contacts = getContactsObject();
-    var length = contact.length;
+    var length = contacts.length;
     for (var i = 0; i < length; i++) {
         if (contacts[i][tag] === value) {
             contacts.splice(i, 1);
