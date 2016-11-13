@@ -88,6 +88,7 @@ function updateContact(name, number) {
     for (var i = 0; i < length; i++) {
         if (contacts[i].name === name) {
             contacts[i].number = number;
+            updateContactsObject(contacts);
             return true;
         }
     }
