@@ -39,24 +39,21 @@ function deleteAllContacts() {
     delete window.localStorage[STORAGE_NAME];
 }
 
-function getContactsByName(name) {
+function getContact(tag, value) {
     var contacts = getContactsObject(); // Guaranteed array
     var length = contacts.length;
     for (var i = 0; i < length; i++) {
-        if (contacts[i].name === name)
+        if (contacts[i][tag] === value)
             return contacts[i];
     }
-    // Contact not found with given name
+    // Contact not found with given tag
     return null;
 }
 
-function getContactsByNumber(number) {
-    var contacts = getContactsObject(); // Guaranteed array
-    var length = contacts.length;
-    for (var i = 0; i < length; i++) {
-        if (contacts[i].number === number) 
-            return contacts[i];
-    }
-    // Contact not found with given number 
-    return null;
+function getContactByName(name) {
+    return getContact('name', name);
+}
+
+function getContactByNumber(number) {
+    return getContact('number', number);
 }
