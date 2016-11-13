@@ -86,7 +86,7 @@ function updateContact(name, number) {
     var contacts = getContactsObject();
     var length = contacts.length;
     for (var i = 0; i < length; i++) {
-        if (contacts[i][name] === name) {
+        if (contacts[i].name === name) {
             contacts[i].number = number;
             return true;
         }
