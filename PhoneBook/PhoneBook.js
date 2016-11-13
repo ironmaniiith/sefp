@@ -29,11 +29,14 @@ function addContact(name, number, img) {
         img: img
     };
     contacts.push(contact);
-    var contactString = JSON.stringify(contacts);
-    window.localStorage.setItem('Contacts', contactString);
+    updateContactsObject(contacts);
     return true;
  }
- 
+
+function updateContactsObject(contacts) {
+    var contactString = JSON.stringify(contacts);
+    window.localStorage.setItem('Contacts', contactString);
+}
 
 function deleteAllContacts() {
     delete window.localStorage[STORAGE_NAME];
@@ -64,8 +67,7 @@ function deleteContact(tag, value) {
     for (var i = 0; i < length; i++) {
         if (contacts[i][tag] === value) {
             contacts.splice(i, 1);
-            var contactString = JSON.stringify(contacts);
-            window.localStorage.setItem('Contacts', contactString);
+            updateContactsObject(contacts);
             return;
         }
     }
