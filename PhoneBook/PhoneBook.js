@@ -57,3 +57,24 @@ function getContactByName(name) {
 function getContactByNumber(number) {
     return getContact('number', number);
 }
+
+function deleteContact(tag, value) {
+    var contacts = getContactsObject();
+    var length = contact.length;
+    for (var i = 0; i < length; i++) {
+        if (contacts[i][tag] === value) {
+            contacts.splice(i, 1);
+            var contactString = JSON.stringify(contacts);
+            window.localStorage.setItem('Contacts', contactString);
+            return;
+        }
+    }
+}
+
+function deleteContactByName(name) {
+    return deleteContact('name', name);
+}
+
+function deleteContactByNumber(number) {
+    return deleteContact('number', number);
+}
