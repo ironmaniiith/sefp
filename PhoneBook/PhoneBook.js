@@ -20,9 +20,7 @@
     }
 
     function addContact(name, number, img) {
-        if (img === undefined) {
-            img = defaultImage();
-        }
+        img = (typeof img === undefined) ? defaultImage() : img;
         var contacts = getContactsObject();
         var contact = {
             name: name,
@@ -30,8 +28,13 @@
             img: img
         };
         contacts.push(contact);
-        updateContactsObject(contacts);
-        return true;
+        try{
+            updateContactsObject(contacts);
+            return true;
+        } catch (e) {
+            // throw new Error('Some error occured while saving contacts');
+            return false;
+        }
     }
 
     function updateContactsObject(contacts) {
