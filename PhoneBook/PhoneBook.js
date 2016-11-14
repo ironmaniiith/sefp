@@ -19,6 +19,11 @@
         }
     }
 
+    function updateContactsObject(contacts) {
+        var contactString = JSON.stringify(contacts);
+        window.localStorage.setItem('Contacts', contactString);
+    }
+
     function addContact(name, number, img) {
         img = (typeof img === undefined) ? defaultImage() : img;
         var contacts = getContactsObject();
@@ -35,11 +40,6 @@
             // throw new Error('Some error occured while saving contacts');
             return false;
         }
-    }
-
-    function updateContactsObject(contacts) {
-        var contactString = JSON.stringify(contacts);
-        window.localStorage.setItem('Contacts', contactString);
     }
 
     function getContact(tag, value) {
