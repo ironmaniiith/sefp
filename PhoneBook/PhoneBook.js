@@ -23,9 +23,6 @@
         if (img === undefined) {
             img = defaultImage();
         }
-        console.log(name);
-        console.log(number);
-        console.log(img);
         var contacts = getContactsObject();
         var contact = {
             name: name,
