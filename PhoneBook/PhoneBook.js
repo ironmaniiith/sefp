@@ -2,7 +2,7 @@
     var STORAGE_NAME = 'Contacts';
 
     function defaultImage() {
-        return 'default.png';// Your default image link;
+        return 'img/default.png';// Your default image link;
     }
 
     function getContactsObject() {
