@@ -41,7 +41,7 @@
             img: img
         };
         contacts.push(contact);
-        try{
+        try {
             updateContactsObject(contacts);
             return true;
         } catch (e) {
@@ -74,11 +74,12 @@
         var length = contacts.length;
         for (var i = 0; i < length; i++) {
             if (contacts[i][tag] === value) {
-                contacts.splice(i, 1);
+                splice.call(contacts, i, 1);
                 updateContactsObject(contacts);
-                return;
+                return true;
             }
         }
+        return false;
     }
 
     function deleteContactByName(name) {
