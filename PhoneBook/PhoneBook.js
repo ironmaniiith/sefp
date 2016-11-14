@@ -24,6 +24,10 @@
     }
 
     function updateContactsObject(contacts) {
+        if (toString.call(contacts) !== arrayTag) {
+            // throw new Error ('Contacts should be an array');
+            return;
+        }
         var contactString = JSON.stringify(contacts);
         window.localStorage.setItem('Contacts', contactString);
     }
