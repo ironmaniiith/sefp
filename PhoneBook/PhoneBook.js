@@ -1,5 +1,9 @@
 ;(function() {
-    var STORAGE_NAME = 'Contacts';
+    var STORAGE_NAME = 'Contacts',
+        arrayTag = '[object Array]',
+        slice = Array.prototype.slice,
+        splice = Array.prototype.splice,
+        toString = Object.prototype.toString;
 
     function defaultImage() {
         return 'img/default.png';// Your default image link;
